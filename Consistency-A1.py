@@ -15,10 +15,8 @@ def solution():
         # isVowel and add cost 2 if it is vowel and add cost 1 if it is not vowel
         for var in string:
             if var != chr(i):
-                if isVowel(var) and isVowel(chr(i)):
-                    cost += 2
-
-                cost += 1
+                cost += 2 if isVowel(var) == isVowel(chr(i)) else 1
+                
 
         ans = min(cost, ans)
 
